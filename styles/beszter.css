@@ -91,3 +91,21 @@
 .wedding-footer .small {
   font-size: 14px;
 }
+
+/* Center the RSVP block */
+.rsvp-centered h2,
+.rsvp-centered p {
+  text-align: center;
+}
+
+.rsvp-container {
+  text-align: center;
+}
+
+/* Make button nicely centered */
+.rsvp-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+}

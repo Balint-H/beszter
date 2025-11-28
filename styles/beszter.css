@@ -1,0 +1,93 @@
+/* --------------------------------------------------
+   Wedding Page Adjustments
+   (Light, soft aesthetic layered on top of style.css)
+----------------------------------------------------- */
+
+/* Color palette for wedding page */
+:root {
+  --wedding-bg: #fbf7f2;
+  --wedding-accent: #d8b4a0;       /* soft blush sandstone */
+  --wedding-accent-dark: #b08978;
+  --wedding-text: #3b3a39;
+  --wedding-header-bg: #f2e9e4;   /* warm ivory-pink */
+}
+
+/* Header */
+.wedding-header {
+  background: var(--wedding-header-bg);
+  color: var(--wedding-text);
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  border-bottom: 3px solid var(--wedding-accent);
+}
+
+.wedding-header-inner h1 {
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+
+.wedding-header-inner h2 {
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Generic Section Styling */
+.content-section {
+  background: var(--wedding-bg);
+  color: var(--wedding-text);
+  padding: 40px 0;
+}
+
+.content-section.alt {
+  background: #fff;
+}
+
+.info-block {
+  margin: 30px 0;
+  padding: 20px;
+  border-left: 4px solid var(--wedding-accent);
+  background: rgba(255,255,255,0.7);
+  border-radius: 8px;
+}
+
+.info-block h3 {
+  margin-top: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 26px;
+  color: var(--wedding-accent-dark);
+}
+
+.schedule-list li {
+  margin: 6px 0;
+}
+
+/* Buttons */
+.wedding-btn {
+  background: var(--wedding-accent);
+  color: #fff !important;
+  padding: 10px 16px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.wedding-btn:hover {
+  background: var(--wedding-accent-dark);
+}
+
+/* Footer */
+.wedding-footer {
+  background: var(--wedding-header-bg);
+  text-align: center;
+  padding: 40px 0;
+  border-top: 3px solid var(--wedding-accent);
+}
+
+.wedding-footer .small {
+  font-size: 14px;
+}

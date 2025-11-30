@@ -5,11 +5,13 @@
 
 /* Color palette for wedding page */
 :root {
-  --wedding-bg: #fbf7f2;
-  --wedding-accent: #d8b4a0;       /* soft blush sandstone */
-  --wedding-accent-dark: #b08978;
-  --wedding-text: #3b3a39;
-  --wedding-header-bg: #f2e9e4;   /* warm ivory-pink */
+  --wedding-bg: #e2e7f8;
+  --wedding-accent: #a0b4d8;       
+  --wedding-accent-bright: #c5d4ff;      
+  --wedding-accent-dark: #7889b0;
+  --wedding-accent-dark-dark: #001035;
+  --wedding-text: #393a3b;
+  --wedding-header-bg: #FFFFFF;   
 }
 
 /* Header */
@@ -17,14 +19,163 @@
   background: var(--wedding-header-bg);
   color: var(--wedding-text);
   text-align: center;
-  padding-top: 80px;
-  padding-bottom: 40px;
-  border-bottom: 3px solid var(--wedding-accent);
 }
 
 .wedding-header-inner h1 {
   font-size: 56px;
   margin-bottom: 10px;
+}
+
+/* Positioning container */
+.wedding-header {
+  position: relative;
+  overflow: hidden; /* ensures images don't spill out of header height */
+}
+
+/* Make image containers fill the entire height of the banner */
+.banner-image {
+  position: absolute;
+  top: -2px;
+  bottom: 0;     /* this makes height = banner height */
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Scale the images by height (auto width) */
+.banner-image img {
+  height: 104%;   /* automatically matches banner height */
+  width: auto;
+}
+
+/* Left-aligned image */
+.left-img {
+  left: 0;
+}
+
+/* Right-aligned image */
+.right-img {
+  right: 0;
+}
+
+.ivy-section {
+  position: relative;
+  overflow: visible; 
+  border-bottom: 3px solid var(--wedding-accent-bright);
+  border-top: 3px solid var(--wedding-accent-bright);
+}
+
+.ivy-section .center-img {
+  position: absolute;
+  top: 0; 
+  left: 50%;
+  transform: translate(-50%, -14.4%);
+  max-width: 1100px;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.ivy-section .mill-img {
+  position: absolute;
+
+  bottom: 0px;
+  left: 0;     
+  
+  width: 100%;  
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* We must also ensure the <img> element inside the div spans 100% */
+.ivy-section .mill-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: none;
+}
+
+.ivy-section .center-img-circle {
+  position: absolute;
+  top: 0; 
+  left: 50%;
+  transform: translate(-53.5%, 90%);
+  max-width: 550px;
+  
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ivy-section .center-img-circle img {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100px;
+  height: auto;
+  display: block;
+}
+
+.shadow-pop {
+  /* box-shadow: [Horizontal] [Vertical] [Blur] [Spread] [Color]; */
+  box-shadow: 0px 0px 15px 6px rgba(0, 0, 0, 0.2);
+}
+
+.bg-container {
+  position: relative;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    transform: translate(0%, -100%);
+}
+
+@media screen and (max-width:850px) {
+  .bg-container {
+  display: none;
+}
+
+}
+
+.bg-item {
+    position: relative;
+    height: auto;
+    pointer-events: none;
+}
+
+
+@media screen and (max-width:750px) {
+  .ivy-section .center-img-circle img {
+  display: none;
+  }
+  
+
+}
+
+@media screen and (max-width:900px) {
+    .ivy-section .mill-img{
+  direction: rtl;
+  min-width: 900px;
+  left: auto;
+  right: 0px;
+  overflow:hidden;
+}
+
+.ivy-section .mill-img img{
+  direction: rtl;
+  min-width: 750px;
+  overflow:hidden;
+}
+}
+
+.ivy-section .center-img img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure text stays on top */
+.wedding-header-inner {
+  position: relative;
+  z-index: 2;
 }
 
 .wedding-header-inner h2 {
@@ -52,8 +203,38 @@
   margin: 30px 0;
   padding: 20px;
   border-left: 4px solid var(--wedding-accent);
+  border-bottom: 4px solid var(--wedding-accent);
   background: rgba(255,255,255,0.7);
   border-radius: 8px;
+}
+
+.content-section.alt .info-block {
+  background: #1d2d44;    
+  color: #FFFFFF;         
+  border-left: 4px solid var(--wedding-accent-dark-dark);
+  border-bottom: 4px solid var(--wedding-accent-dark-dark);
+  padding: 20px 24px;
+  border-radius: 8px;
+}
+
+
+.content-section.alt .info-block h3 {
+  color: #FFFFFF;
+}
+
+/* Lists inside dark blocks */
+.content-section.alt .info-block ul,
+.content-section.alt .info-block li {
+  color: #FFFFFF;
+}
+
+/* Anchor links inside dark blocks */
+.content-section.alt .info-block a {
+  color: var(--wedding-accent-bright);              /* soft green highlight */
+}
+
+.content-section.alt .info-block a:hover {
+  color: #ffffff;
 }
 
 .info-block h3 {
@@ -63,9 +244,6 @@
   color: var(--wedding-accent-dark);
 }
 
-.schedule-list li {
-  margin: 6px 0;
-}
 
 /* Buttons */
 .wedding-btn {
@@ -74,10 +252,22 @@
   padding: 10px 16px;
   border-radius: 5px;
   font-weight: 600;
+  transition: all 0.1s ease;
+  box-shadow: 0 4px 0 var(--wedding-accent-dark);
+  position: relative;
+}
+
+/* Pressed effect */
+.wedding-btn:active {
+  top: 2px;
+  box-shadow: 0 2px 0 var(--wedding-accent-dark);
+  background: var(--wedding-accent-dark);
 }
 
 .wedding-btn:hover {
-  background: var(--wedding-accent-dark);
+  top: -2px;
+  box-shadow: 0 5px 0 var(--wedding-accent-dark);
+  background: var(--wedding-accent-bright);
 }
 
 /* Footer */
@@ -85,7 +275,11 @@
   background: var(--wedding-header-bg);
   text-align: center;
   padding: 40px 0;
-  border-top: 3px solid var(--wedding-accent);
+}
+
+.wedding-footer p {
+    color: #000000;
+    text-align: center;
 }
 
 .wedding-footer .small {
@@ -96,16 +290,20 @@
 .rsvp-centered h2,
 .rsvp-centered p {
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .rsvp-container {
   text-align: center;
+  padding: 0px;
 }
 
 /* Make button nicely centered */
 .rsvp-btn {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   padding: 12px 24px;
   font-size: 18px;
+  text-align: center;
 }

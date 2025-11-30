@@ -13,6 +13,7 @@
   <!-- Reuse base styling + add wedding-specific adjustments -->
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/beszter.css">
+  <link rel="stylesheet" href="styles/schedule_list.css">
 </head>
 
 <body>
@@ -20,79 +21,122 @@
 
     <!-- HEADER -->
     <header class="wedding-header">
+    
+      
       <div class="content-wrap wedding-header-inner">
-        <div>
-          <h1>We're Getting Married!</h1>
-          <h2>Eszter &amp; Bálint</h2>
-          <p class="subtitle">Ssss! Még nincs kész a weboldal!</p> 🤫
+        <div class="center-img">
+          <img src="images/banner_en.png" alt="Banner">
         </div>
+        <div>
+          <h2>We're Getting Married!</h1>
+        </div>
+      </div>
+      
+      <div class="banner-image left-img">
+        <img src="images/left.png" alt="Left decorative image">
+      </div>
+
+      <div class="banner-image right-img">
+        <img src="images/right.png" alt="Right decorative image">
       </div>
     </header>
 
     <!-- MAIN SECTIONS -->
-    <section class="content-section">
+    <section class="content-section ivy-section shadow-pop">
+      <div class="center-img">
+        <img src="images/ivy.png" alt="Ivy cascading down">
+      </div>
+    
       <div class="content-wrap">
         <h2>The Celebration</h2>
         <p>
-          Thank you for joining us on this special day. Below you’ll find everything you need to know about the ceremony, reception, travel, and accommodation.
+          Please join us on this special day! Below you’ll find everything you need to know about the ceremony, travel, and accommodation.
         </p>
 
         <div class="info-block">
           <h3>Ceremony</h3>
-          <p><b>Date:</b> [Wedding Date]</p>
-          <p><b>Time:</b> [Ceremony Start Time]</p>
-          <p><b>Location:</b> [Venue Name, Address]</p>
-          <p>[Short note about dress code or local details]</p>
-        </div>
-
-        <div class="info-block">
-          <h3>Reception</h3>
-          <p><b>Venue:</b> [Venue Name]</p>
-          <p><b>Starts:</b> [Time]</p>
-          <p>[Optional: Parking info, dancing shoes recommendation, etc.]</p>
+          <p><b>Date:</b> 2026 July 18</p>
+          <p><b>Time:</b> Arrive at 15:00</p>
+          <p><b>Country:</b> Hungary</p>
+          <p><b>Location:</b> <a href=https://kalnamalom.hu/en/gallery/ target="_blank" >Kálna-Mátyás Mill</a></p>
+          <div class="rsvp-container">
+          <a class="btn wedding-btn rsvp-btn" 
+           href=https://google.com/maps/place/Kálna-Mátyás+Malom/@47.4012192,18.7237528,4992m/data=!3m1!1e3!4m6!3m5!1s0x476a0f003c890979:0x1a62e4b89f7acf1c!8m2!3d47.3985028!4d18.7140687!16s%2Fg%2F11wj0f5sry?entry=tts&g_ep=EgoyMDI1MDcwOC4wIPu8ASoASAFQAw%3D%3D&skid=076a48a1-2f62-4197-967b-7d732a65403f target="_blank">
+          See on Google Maps
+          </a>
+          </div>
         </div>
 
         <div class="info-block">
           <h3>Schedule</h3>
-          <ul class="schedule-list">
-            <li><b>[HH:MM]</b> – Guests arrive</li>
-            <li><b>[HH:MM]</b> – Ceremony</li>
-            <li><b>[HH:MM]</b> – Reception begins</li>
-            <li><b>[HH:MM]</b> – Dinner</li>
-            <li><b>[HH:MM]</b> – Dance & party</li>
+          Subject to change, so take this with a pinch of salt!
+          <ul class="schedule-list mono-bold">
+            <li><b>14:00</b> <span>(TBC) Transport from Kelenföld station</span></li>
+            <li><b>15:00</b> <span>Arrival, Greetings and Drinks</span></li>
+            <li><b>16:00</b> <span>Ceremony</span></li>
+            <li><b>17:00</b> <span>Photos and Congratulations</span></li>
+            <li><b>18:30</b> <span>Dinner</span></li>
+            <li><b>20:00</b> <span>First Dance</span></li>
+            <li><b>22:00</b> <span>Cake Break</span></li>
+            <li><b>22:30</b> <span>More Dancing</span></li>
+            <li><b>00:00</b> <span>Midnight Snacks</span></li>
+            <li><b>01:00</b> <span>More Dancing 2: the Sequel</span></li>
+            <li><b>02:00</b> <span>(TBC) Transport back to Kelenföld station</span></li>
           </ul>
         </div>
+        <div class="bg-container">
+              <img src="images/barrel.png" class="bg-item" style="left:600px; top:-550px; width:8%;">
+              <img src="images/rings.png" class="bg-item" style="left:0%; top:-420px; width:12%;">
+              <img src="images/cake.png" class="bg-item" style="left:-170px; top:-220px; width:20%;">
+          </div>
       </div>
+      
+      <div class="mill-img">
+        <img src="images/mill.png" alt="Water mill doodle">
+      </div>
+      
+      <div><br/></div>
     </section>
 
     <section class="content-section alt">
       <div class="content-wrap">
-        <h2>Travel & Accommodation</h2>
-
+        <h2>Travel & Other info</h2>
+        <p>This information may change, so <b>please make sure to enter your email address in the RSVP form</b> below, so we can alert you in case there is a change.<p/>
         <div class="info-block">
-          <h3>Getting There</h3>
-          <p>[Driving/Public Transport instructions]</p>
-          <p>[Parking notes]</p>
+          <h3>Getting There from Budapest</h3>
+          <p>The venue is about 40 minutes drive from Budapest. There is free parking without limitations on-site. If you are coming by car, <a href=https://kalnamalom.hu/en/contact/ target="_blank" >please see the directions provided by the venue</a>.</p>
+          
+          <p>For people without cars, we'll organize shared transport for people from <a href=https://maps.app.goo.gl/8xtDCojtoAfyiN1v9 target="_blank">Kelenföld train station</a>, leaving at 14:00. We are also planning a return trip at 02:00 AM. Please let us know in the RSVP form if you'd like to take part in the transport either way, or if the 02:00 AM time would not work for you. We'll try to accomodate as many people as we can.</p>
+          
+          <p>Taxis are available to-and-from Budapest, altough they may cost up to £45, so if you are interested in this option its best to carpool.</p>
         </div>
 
         <div class="info-block">
           <h3>Accommodation</h3>
-          <ul>
-            <li><b>[Hotel 1]</b> – [Distance from venue], [Link or address]</li>
-            <li><b>[Hotel 2]</b> – [Distance, notes]</li>
-            <li><b>[Hotel 3]</b> – [Optional Airbnb recommendations]</li>
-          </ul>
+          <p>Unfortunately we can't guarantee accomodation on-site for guests. For this reason, on option is to find a place to stay in Budapest.</p>
+          <p>You may also consdier getting accomodation in one of the adjacent towns such as Etyek, which is 20 mins away by car and may be easier to organise your own travel to and from. Furthermore, Etyek has lovely vineyards, which you may be interested to check out before/after the wedding!</p>
+          <p>If you are having trouble finding a place to stay let us know<br/>(at <u>balint.eszter.eskuvo@gmail.com</u>), and we can make some recommendations!</p>
         </div>
+        
+        <div class="info-block">
+          <h3>Gifts</h3>
+          <p>We would be very grateful for any contributions to cover the costs of the wedding and our honeymoon! We'd much prefer this over phyisical gifts, which may be challenging to take back to the UK with us.</p>
+          <p>If you would like to make a contribution, you may do so with these details:</p>
+          <p>Name: Balint Hodossy<br/>Sort code: 04-00-04<br/>Account number: 62708051<br/>IBAN: GB15 MONZ 0400 0462 7080 51</p>
+        </div>
+        
       </div>
     </section>
     
-<section class="content-section rsvp-centered">
+<section class="content-section rsvp-centered ivy-section shadow-pop">
   <div class="content-wrap rsvp-container">
     <h2>RSVP</h2>
-    <p>Please let us know if you can join us by <b>[RSVP Date]</b>.</p>
-
+    <p>Please let us know if you can join us by <b>January 31st!</b>.<br/>This is important so we can make plans according to a guest list.</p>
+    <div class="center-img-circle">
+        <img src="images/circle.png" alt="Circling">
+    </div>
     <a class="btn wedding-btn rsvp-btn" 
-       href="[GOOGLE FORM LINK]" 
+       href="https://docs.google.com/forms/d/e/1FAIpQLSe_RSCYQOCIzbRxMezLiKYYTZl2n2bWMtrv1bp0Y-_5S0lp1w/viewform?usp=dialog" 
        target="_blank">
       Open RSVP Form
     </a>
@@ -101,11 +145,11 @@
 </script>
 
     <!-- FOOTER -->
-    <footer class="wedding-footer">
+    <footer class="wedding-footer rsvp-container">
       <div class="content-wrap">
-        <p>We can't wait to celebrate with you ❤️</p>
+        <p>Looking forward to seeing you there!</p>
         <p class="small">If you have any questions, feel free to reach out:</p>
-        <p class="small"><u>[your email]</u></p>
+        <p class="small"><u>balint.eszter.eskuvo@gmail.com</u></p>
       </div>
     </footer>
 

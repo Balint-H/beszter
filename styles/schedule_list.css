@@ -1,0 +1,139 @@
+/* 1. Container Setup */
+.schedule-list {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.mono-bold b {
+  font-family: 'Space Mono', monospace; /* Ensure monospace font */
+}
+
+/* 2. The Central Line */
+.schedule-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #ccc;
+  transform: translateX(-50%);
+}
+
+.schedule-list li {
+  position: relative;
+  width: 50%; /* Adjusted to 50% to touch the center line exactly */
+  padding-top: 20px;
+  box-sizing: border-box;
+  
+  /* Flexbox setup for alignment */
+  display: flex; 
+  align-items: flex-start; /* Aligns text to top if it wraps */
+  gap: 10px; /* Space between Time and Text */
+}
+
+
+.schedule-list li b {
+  flex-shrink: 0; 
+}
+
+/* 4. The Dot (●) */
+.schedule-list li::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: 4px solid #153055;
+  top: 25px; /* Matches the top padding + adjustment for text height */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* 5. Alternating Sides */
+
+/* --- LEFT ITEMS (Odd) --- */
+.schedule-list li:nth-child(odd) {
+  float: left;
+  clear: both;
+  text-align: right;
+  padding-right: 20px;
+  
+  /* FLIP the order so it reads: [Text] - [Time] | */
+  flex-direction: row-reverse; 
+}
+
+/* Add the DASH via CSS for the left side */
+.schedule-list li:nth-child(odd) b::before {
+  content: "- "; 
+}
+
+.schedule-list li:nth-child(odd)::after {
+  right: -8px; /* Pin dot to right edge */
+}
+
+/* --- RIGHT ITEMS (Even) --- */
+.schedule-list li:nth-child(even) {
+  float: right;
+  clear: both;
+  text-align: left;
+  padding-left: 20px;
+  
+  /* Standard order: | [Time] - [Text] */
+  flex-direction: row; 
+}
+
+/* Add the DASH via CSS for the right side */
+.schedule-list li:nth-child(even) b::after {
+  content: " -";
+}
+
+.schedule-list li:nth-child(even)::after {
+  left: -8px; /* Pin dot to left edge */
+}
+
+/* 6. Clearfix */
+.schedule-list::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* --- Mobile Responsiveness --- */
+@media screen and (max-width: 800px) {
+  .schedule-list::before {
+    left: 20px;
+  }
+  
+  .schedule-list li {
+    width: 100%;
+  }
+
+  /* Reset layout for mobile: always [Time] - [Text] */
+  .schedule-list li:nth-child(odd), 
+  .schedule-list li:nth-child(even) {
+    float: none;
+    text-align: left;
+    flex-direction: row; /* Always Row direction on mobile */
+    padding-left: 50px;
+    padding-right: 10px;
+  }
+
+  /* Fix the dashes for mobile (Remove the Left-side dash logic) */
+  .schedule-list li:nth-child(odd) b::before {
+    content: none;
+  }
+  .schedule-list li:nth-child(odd) b::after {
+    content: " -"; /* Add dash to the right side, same as Evens */
+  }
+
+  /* Reset Dots */
+  .schedule-list li:nth-child(odd)::after, 
+  .schedule-list li:nth-child(even)::after {
+    left: 12px;
+    right: auto;
+  }
+}

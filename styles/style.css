@@ -67,44 +67,7 @@ h2{
 	font-size: 32px;
 }
 
-summary {
-  display: grid;
-  grid-template-columns: 1.3fr 2fr;
-  align-items: center; 
-  color: #000000;
-  font-size: 17px;
-  border-bottom: 2px solid #0d132150;
-  column-gap: 20px;
-  cursor: pointer; 
-  margin-top:15px;
-}
 
-.side-projects summary {
-  color: #FFFFFF;
-}
-
-summary::before {
- font-size: 20px;
- color: #0d132150;
- font-family: sans-serif;
- content: "▶";
- cursor: pointer;
- grid-column: 1;
-}
-
-details:open > summary::before {
- font-size: 18px;
- content: "▼";
-}
-
-
-summary > * {
-  grid-column: 2; 
-}
-
-details:open > summary {
-  border-bottom: 0px;
-}
 
 summary .center-text {
   text-align:center;

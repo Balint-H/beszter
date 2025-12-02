@@ -95,10 +95,11 @@
 
 .ivy-section .center-img-circle {
   position: absolute;
-  top: 0; 
+  bottom: 0; 
   left: 50%;
-  transform: translate(-53.5%, 90%);
-  max-width: 550px;
+  transform: translate(-49%, -5%);
+  max-width: 340px;
+  min-width: 340px;
   
   width: 100%;
   z-index: 2;
@@ -106,11 +107,10 @@
 }
 
 .ivy-section .center-img-circle img {
-  width: 100%;
-  max-width: 100%;
   min-width: 100px;
   height: auto;
   display: block;
+  overflow:hidden;
 }
 
 .shadow-pop {
@@ -142,9 +142,7 @@
 
 
 @media screen and (max-width:750px) {
-  .ivy-section .center-img-circle img {
-  display: none;
-  }
+
   
 
 }
@@ -247,26 +245,26 @@
 
 /* Buttons */
 .wedding-btn {
-  background: var(--wedding-accent);
+  background:  #3d4d84;
   color: #fff !important;
   padding: 10px 16px;
   border-radius: 5px;
   font-weight: 600;
   transition: all 0.1s ease;
-  box-shadow: 0 4px 0 var(--wedding-accent-dark);
+  box-shadow: 0 4px 0 #000000;
   position: relative;
 }
 
 /* Pressed effect */
 .wedding-btn:active {
   top: 2px;
-  box-shadow: 0 2px 0 var(--wedding-accent-dark);
+  box-shadow: 0 2px 0 #000000;
   background: var(--wedding-accent-dark);
 }
 
 .wedding-btn:hover {
   top: -2px;
-  box-shadow: 0 5px 0 var(--wedding-accent-dark);
+  box-shadow: 0 5px 0 #000000;
   background: var(--wedding-accent-bright);
 }
 

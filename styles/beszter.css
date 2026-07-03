@@ -47,6 +47,23 @@
   width: auto;
 }
 
+/* The container now takes up the exact width of the screen */
+.wide-image {
+  width: 90%;
+  display: block;
+  margin: -40px auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Forces the image to stretch full-width and overrides base styles */
+.wide-image img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+}
+
 /* Left-aligned image */
 .left-img {
   left: 0;
